@@ -28,5 +28,19 @@ $(function() {
   //ACCORDION
     // https://jqueryui.com/accordion/
         // $('#accordion').accordion();
-        $('#accordion').accordion({ collapsible: true, heightStyle: "content" });
+        // $('#accordion').accordion({ collapsible: true, heightStyle: "content" });
+
+  //DATE PICKER
+    // https://jqueryui.com/datepicker/
+      // $('.date').datepicker();
+      $('.date').datepicker({
+        showOtherMonths: true,
+        selectOtherMonths: true,
+        showButtonPanel: true,
+        changeMonth: true,
+        changeYear: true,
+        numberOfMonths: 3,
+        minDate: -1, //Current date backwards restriction "-1W" etc
+        maxDate: "1W"
+      });
 });
