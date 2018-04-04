@@ -10,19 +10,23 @@ $(function() {
 
   //DROPPABLE
   // https://jqueryui.com/droppable/
-  // $('#droppable').droppable({
-  //   accept: '#box1',
-  //   drop: function() {
-  //     $(this).find('span').html("Drop it like it's hot.")
-  //   }
-  // });
+    // $('#droppable').droppable({
+    //   accept: '#box1',
+    //   drop: function() {
+    //     $(this).find('span').html("Drop it like it's hot.")
+    //   }
+    // });
 
   //SORTABLE
-  // https://jqueryui.com/sortable/
-  // $('#sortable').sortable();
-  $('#sortableToo').sortable();
-  // $('#sortable').sortable({connectWith: '#sortableToo'});
-  $('#sortable').sortable({connectWith: '#sortableToo', placeholder: 'placeholderBox'}); //placeholderBox is styled class
-  $('#sortableToo').sortable({connectWith: '#sortable'});
+  // // https://jqueryui.com/sortable/
+    // // $('#sortable').sortable();
+    // $('#sortableToo').sortable();
+    // // $('#sortable').sortable({connectWith: '#sortableToo'});
+    // $('#sortable').sortable({connectWith: '#sortableToo', placeholder: 'placeholderBox'}); //placeholderBox is styled class
+    // $('#sortableToo').sortable({connectWith: '#sortable'});
 
+  //ACCORDION
+    // https://jqueryui.com/accordion/
+        // $('#accordion').accordion();
+        $('#accordion').accordion({ collapsible: true, heightStyle: "content" });
 });
