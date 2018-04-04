@@ -24,7 +24,7 @@ body {
     /* fixed height container
        with overflow for scrollbar
     */
-    height: 400px;
+    height: 800px;
     overflow: auto;
 }
 
