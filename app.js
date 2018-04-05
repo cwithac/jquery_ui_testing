@@ -33,14 +33,36 @@ $(function() {
   //DATE PICKER
     // https://jqueryui.com/datepicker/
       // $('.date').datepicker();
-      $('.date').datepicker({
-        showOtherMonths: true,
-        selectOtherMonths: true,
-        showButtonPanel: true,
-        changeMonth: true,
-        changeYear: true,
-        numberOfMonths: 3,
-        minDate: -1, //Current date backwards restriction "-1W" etc
-        maxDate: "1W"
-      });
+      // $('.date').datepicker({
+      //   showOtherMonths: true,
+      //   selectOtherMonths: true,
+      //   showButtonPanel: true,
+      //   changeMonth: true,
+      //   changeYear: true,
+      //   numberOfMonths: 3,
+      //   minDate: -1, //Current date backwards restriction "-1W" etc
+      //   maxDate: "1W"
+      // });
+
+  //TO DO LIST PROJECT
+    $('#todoList ul').sortable({
+      items: "li:not('.listTitle, .addItem')",
+      connectWith: "ul",
+      dropOnEmpty: true, //Drop is placed on day of week, not open li space
+      placeholder: "emptySpace" //css class
+    });
+
+    $('input').keydown(function(e) {
+      if (e.keyCode == 13) {
+        var item = $(this).val();
+          $(this).parent().parent().append('<li>' + item + '</li>');
+          $(this).val('');
+      }
+    });
+
+    $('#trash').droppable({
+        drop: function(event, ui) {
+            ui.draggable.remove();
+        }
+    });
 });
